@@ -1,0 +1,41 @@
+\documentclass[journal]{IEEEtran}
+
+\usepackage[backend=biber,citestyle=alphabetic,bibstyle=authoryear]{biblatex}
+\addbibresource{biblio.bib}
+
+\input{common/packages}
+
+% Remove makeglossaries since no glossary is being printed
+%\makeglossaries
+
+% \newglossaryentry{strip mining}
+% {
+%   name=strip mining,
+%   description={is the practice of mining a seam of mineral, by first removing a long strip of overlying soil and rock}
+% }
+
+% \newacronym{t}{t}{tons}
+
+\begin{document}
+
+\title{Project - Nonlinear System identification}
+
+\author{Emmeran~COLOT}
+
+\maketitle
+
+%\listoftables % ToC for tables
+
+%\listoffigures % ToC for figures
+
+\input{content.tex}
+
+%\printglossary
+
+%\printglossary[type=\acronymtype]
+
+%Bibliography
+\nocite{*}
+\printbibliography
+
+\end{document}

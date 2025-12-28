@@ -1,0 +1,17 @@
+\section{System Description}
+
+The device studied throughout this project is a linear system with a static nonlinear feedback loop. It has a single input and a single output and the feedback is known to follow the input-output relation given by
+\begin{equation}
+    y(t) = u^3(t).
+    \label{eq:NL_feedback}
+\end{equation}
+
+The objective will be to identify the linear part of the system and to have a measure of the nonlinearity and noise levels. The knowledge of~(\ref{eq:NL_feedback}) will not be used.
+
+The measurement device (referred to as the \textit{PXI setup}) allows to send only multisines and their RMS value cannot exceed $1$~V. Its ADCs have a range that can be chosen and can sample at high frequencies ($> 1$~GHz).
+
+This report deliberately focusses on the theoretical points and the results rather than the implementation because the Matlab™ scripts and the measured data are available on GitHub\footnote{https://github.com/e-colot/Nonlinear-identification}. 
+
+
+
+
