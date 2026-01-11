@@ -1,0 +1,9 @@
+I have derived something:
+
+u(t) is the input
+c(t) what is fed in the LTI block, c=u+f
+y(t) the ouptut of the LTI block (and of the system) y(t) = \sum_{l=0}^{N_{lag}} h_l c(t-l)
+f(t) the feedback, coming out of the SNL block f(t) = \sum_{n=0}^{N_{order}} a_n y^n(t)
+
+and end up with:
+y(t) = \sum_{l=0}^{N_{lag}} h_l u(t-l) + \sum_{l=0}^{N_{lag}} \sum_{n=0}^{N_{order}} h_l a_n y^n(t-l)

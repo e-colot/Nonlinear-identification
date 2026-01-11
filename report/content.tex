@@ -6,12 +6,43 @@ The device studied throughout this project is a linear system with a static nonl
     \label{eq:NL_feedback}
 \end{equation}
 
-The objective will be to identify the linear part of the system and to have a measure of the nonlinearity and noise levels. The knowledge of~(\ref{eq:NL_feedback}) will not be used.
+The objective will be to identify the linear part of the system and to have a measure of the nonlinearity and noise levels, which is done in Sec.~\ref{sec:BLA} and to then use different non linear models to describe the system in Sec.~\ref{sec:NL_models}.
 
 The measurement device (referred to as the \textit{PXI setup}) allows to send only multisines and their RMS value cannot exceed $1$~V. Its ADCs have a range that can be chosen and can sample at high frequencies ($> 1$~GHz).
 
 This report deliberately focusses on the theoretical points and the results rather than the implementation because the Matlab™ scripts and the measured data are available on GitHub\footnote{https://github.com/e-colot/Nonlinear-identification}. 
 
+Note that this report is the continuation of one that focussed only on linear modelling\footnote{https://github.com/e-colot/LTI-identification} and is therefore not complete about the subject.
+
+
+
+
+
+
+\section{Best Linear Approximation (BLA)}
+\label{sec:BLA}
+
+A multisine has been applied to the system for multiple periods. This was then repeated over multiple realizations were the phase of the multisine was randomly generated each time.
+
+The robust method is applied to the measured signals, which can be summarized as follows: Averaging over the periods allows to remove noise and the non linear distortions are removed by averaging over the realizations.
+
+The variances are then computed over the realizations and Fig.~\ref{fig:FRF} shows the results.
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width=0.48\textwidth]{Pictures/FRF.png}
+    \caption{BLA and standard deviation of non linear distortions and noise.}
+    \label{fig:FRF}
+\end{figure}
+
+
+\vfill\eject % column break
+\section{Non Linear Models}
+\label{sec:NL_models}
+
+\subsection{Memory Polynomial Model}
+
+The first NL model to be applied does not take into consideration the knowledge of~(\ref{eq:NL_feedback}). A simple model is the 
 
 
 
